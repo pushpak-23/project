@@ -1,0 +1,67 @@
+{
+  "skills": [
+    {
+      "name": "Photography",
+      "projects": [
+        {
+          "title": "Wedding Photography",
+          "description": "Beautiful wedding photography capturing precious moments.",
+          "image": "/images/wedding-photography.jpg",
+          "link": "https://example.com/wedding-photography"
+        },
+        {
+          "title": "Nature Photography",
+          "description": "Stunning nature photography from around the world.",
+          "image": "/images/nature-photography.jpg",
+          "link": "https://example.com/nature-photography"
+        },
+        {
+          "title": "Wedding Photography",
+          "description": "Beautiful wedding photography capturing precious moments.",
+          "image": "/images/wedding-photography.jpg",
+          "link": "https://example.com/wedding-photography"
+        },
+        {
+          "title": "Wedding Photography",
+          "description": "Beautiful wedding photography capturing precious moments.",
+          "image": "/images/wedding-photography.jpg",
+          "link": "https://example.com/wedding-photography"
+        },
+        {
+          "title": "Wedding Photography",
+          "description": "Beautiful wedding photography capturing precious moments.",
+          "image": "/images/wedding-photography.jpg",
+          "link": "https://example.com/wedding-photography"
+        },
+        {
+          "title": "Wedding Photography",
+          "description": "Beautiful wedding photography capturing precious moments.",
+          "image": "/images/wedding-photography.jpg",
+          "link": "https://example.com/wedding-photography"
+        }
+      ]
+    },
+    {
+      "name": "Magazine Design",
+      "projects": [
+        {
+          "title": "Fashion Magazine",
+          "description": "Modern and stylish fashion magazine design.",
+          "image": "/images/fashion-magazine.jpg",
+          "link": "https://example.com/fashion-magazine"
+        }
+      ]
+    },
+    {
+      "name": "Videography",
+      "projects": [
+        {
+          "title": "Music Video",
+          "description": "Creative and energetic music video production.",
+          "image": "/images/music-video.jpg",
+          "link": "https://example.com/music-video"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "pricing": [
+    {
+      "skill": "Photography",
+      "description": "Professional photoshoots, events, and product photography.",
+      "hourlyRate": 50
+    },
+    {
+      "skill": "Video Editing",
+      "description": "High-quality video editing for all types of content.",
+      "hourlyRate": 60
+    },
+    {
+      "skill": "Logo Designing",
+      "description": "Creative logo designs that represent your brand.",
+      "hourlyRate": 40
+    },
+    {
+      "skill": "Magazine Design",
+      "description": "Professional magazine layouts and designs.",
+      "hourlyRate": 55
+    },
+    {
+      "skill": "Videography (Reel)",
+      "description": "Short-form video reels for social media and marketing.",
+      "minRate": 150
+    }
+  ]
+}
