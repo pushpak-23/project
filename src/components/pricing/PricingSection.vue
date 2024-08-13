@@ -21,6 +21,7 @@
 import PricingCard from "./PricingCard.vue";
 import pricingData from "../data/pricingData.json";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default {
   components: {
@@ -36,10 +37,25 @@ export default {
   },
   methods: {
     animatePricing() {
+      gsap.registerPlugin(ScrollTrigger);
+
       gsap.fromTo(
         ".pricing-card",
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, stagger: 0.3, duration: 0.8, ease: "power3.out" }
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: ".pricing-card",
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+            once: true, // Animation occurs only once
+          },
+        }
       );
     },
   },

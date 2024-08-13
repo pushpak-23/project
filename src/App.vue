@@ -2,13 +2,24 @@
   <div id="app" class="font-sans">
     <main class="w-full h-full">
       <!-- Hero Section -->
+
       <HeroSection />
       <!-- About Section -->
-      <AboutSection />
-      <PortfolioSection />
-      <PricingSection />
-      <TestimonialsSection />
-      <ContactForm />
+      <section id="about">
+        <AboutSection />
+      </section>
+      <section id="portfolio">
+        <PortfolioSection />
+      </section>
+      <section id="pricing">
+        <PricingSection />
+      </section>
+      <section id="testimonials">
+        <TestimonialsSection />
+      </section>
+      <section id="contact">
+        <ContactForm />
+      </section>
     </main>
   </div>
 </template>

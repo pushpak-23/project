@@ -24,7 +24,7 @@
           v-for="(project, index) in filteredProjects"
           :key="index"
           :project="project"
-          class="transition-transform transform hover:scale-105"
+          class="portfolio-card transition-transform transform hover:scale-105"
         />
       </transition-group>
     </div>
@@ -36,6 +36,9 @@ import FilterButton from "./FilterButton.vue";
 import PortfolioCard from "./PortfolioCard.vue";
 import portfolioData from "../data/portfolioData.json";
 import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   components: {
@@ -65,7 +68,19 @@ export default {
       gsap.fromTo(
         ".portfolio-card",
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, stagger: 0.2, duration: 0.8, ease: "power3.out" }
+        {
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".portfolio-card",
+            start: "top 80%",
+            end: "bottom 20%",
+            toggleActions: "play none none reverse",
+          },
+        }
       );
     },
   },

@@ -27,6 +27,7 @@
 import TestimonialCard from "./TestimonialCard.vue";
 import testimonialsData from "../data/testimonialsData.json";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default {
   components: {
@@ -42,10 +43,25 @@ export default {
   },
   methods: {
     animateTestimonials() {
+      gsap.registerPlugin(ScrollTrigger);
+
       gsap.fromTo(
         ".testimonial-card",
         { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, stagger: 0.3, duration: 0.8, ease: "power3.out" }
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          stagger: 0.3,
+          scrollTrigger: {
+            trigger: ".testimonials-carousel",
+            start: "top 80%",
+            end: "bottom 60%",
+            toggleActions: "play none none none",
+            once: true,
+          },
+        }
       );
     },
   },

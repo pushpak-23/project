@@ -19,7 +19,9 @@
           @submit.prevent="handleSubmit"
           class="bg-white bg-opacity-60 backdrop-filter backdrop-blur-lg p-8 rounded-lg shadow-lg border border-white border-opacity-30"
         >
-          <div class="mb-4">
+          <div
+            class="mb-4 animate__animated animate__fadeInUp animate__delay-1s"
+          >
             <label for="name" class="block text-gray-700">Name</label>
             <input
               v-model="form.name"
@@ -30,7 +32,9 @@
             />
           </div>
 
-          <div class="mb-4">
+          <div
+            class="mb-4 animate__animated animate__fadeInUp animate__delay-1s"
+          >
             <label for="email" class="block text-gray-700">Email</label>
             <input
               v-model="form.email"
@@ -41,7 +45,9 @@
             />
           </div>
 
-          <div class="mb-4">
+          <div
+            class="mb-4 animate__animated animate__fadeInUp animate__delay-1s"
+          >
             <label for="subject" class="block text-gray-700">Subject</label>
             <input
               v-model="form.subject"
@@ -52,7 +58,9 @@
             />
           </div>
 
-          <div class="mb-4">
+          <div
+            class="mb-4 animate__animated animate__fadeInUp animate__delay-1s"
+          >
             <label for="message" class="block text-gray-700">Message</label>
             <textarea
               v-model="form.message"
@@ -64,50 +72,47 @@
           </div>
 
           <button
-            type="submit"
+            type="submit animate__animated animate__fadeInUp animate__delay-1s"
             class="w-full py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition"
           >
             Send Message
           </button>
         </form>
-        <!-- Map Integration (Optional) -->
-        <div
-          class="bg-white bg-opacity-60 backdrop-filter backdrop-blur-lg p-8 rounded-lg shadow-lg border border-white border-opacity-30"
-        >
-          <h3 class="text-2xl font-bold text-gray-800 mb-4">Find Me Here</h3>
-          <iframe
-            class="w-full h-60 rounded"
-            src="https://www.google.com/maps/embed?pb=YOUR_MAP_EMBED_URL"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
 
-      <!-- Social Links -->
-      <div class="mt-12 text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">Connect with Me</h3>
-        <div class="flex justify-center space-x-6">
-          <a
-            href="https://twitter.com/yourprofile"
-            target="_blank"
-            class="text-blue-500 hover:text-blue-600 transition transform hover:scale-110"
-          >
-            <img src="/icons/twitter.png" alt="Twitter" class="w-8 h-8" />
-          </a>
-          <a
-            href="https://linkedin.com/in/yourprofile"
-            target="_blank"
-            class="text-blue-700 hover:text-blue-800 transition transform hover:scale-110"
-          >
-            <img src="/icons/linkedin.png" alt="LinkedIn" class="w-8 h-8" />
-          </a>
-          <a
-            href="https://instagram.com/yourprofile"
-            target="_blank"
-            class="text-pink-500 hover:text-pink-600 transition transform hover:scale-110"
-          >
-            <img src="/icons/instagram.png" alt="Instagram" class="w-8 h-8" />
-          </a>
+        <!-- Social Links -->
+        <div class="flex items-center justify-center p-8">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Connect with Me
+            </h3>
+            <div class="flex justify-center space-x-6">
+              <a
+                href="https://twitter.com/yourprofile"
+                target="_blank"
+                class="text-blue-500 hover:text-blue-600 transition transform hover:scale-110"
+              >
+                <img src="/icons/twitter.png" alt="Twitter" class="w-8 h-8" />
+              </a>
+              <a
+                href="https://linkedin.com/in/yourprofile"
+                target="_blank"
+                class="text-blue-700 hover:text-blue-800 transition transform hover:scale-110"
+              >
+                <img src="/icons/linkedin.png" alt="LinkedIn" class="w-8 h-8" />
+              </a>
+              <a
+                href="https://instagram.com/yourprofile"
+                target="_blank"
+                class="text-pink-500 hover:text-pink-600 transition transform hover:scale-110"
+              >
+                <img
+                  src="/icons/instagram.png"
+                  alt="Instagram"
+                  class="w-8 h-8"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -116,7 +121,10 @@
 
 <script>
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "@emailjs/browser";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   data() {
@@ -137,6 +145,20 @@ export default {
       opacity: 0,
       ease: "power3.out",
     });
+    gsap.from(".animate__fadeInUp", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      stagger: 0.2,
+    });
+
+    gsap.from(".animate__fadeInDown", {
+      y: -50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
   },
   methods: {
     handleSubmit() {
@@ -148,14 +170,9 @@ export default {
       };
 
       emailjs
-        .send(
-          "service_wyfyo6i", // Replace with your actual service ID
-          "template_5jq7fkj", // Replace with your actual template ID
-          templateParams,
-          {
-            publicKey: "xo53ToQFCEklDEf5f", // Replace with your actual public key
-          }
-        )
+        .send("service_wyfyo6i", "template_5jq7fkj", templateParams, {
+          publicKey: "xo53ToQFCEklDEf5f",
+        })
         .then(
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
@@ -179,7 +196,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-/* Customize styles if needed */
-</style>

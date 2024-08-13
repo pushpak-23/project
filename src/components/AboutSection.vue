@@ -1,25 +1,38 @@
 <template>
-  <section ref="aboutSection" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-8 flex flex-col md:flex-row items-center">
+  <section
+    ref="aboutSection"
+    class="relative py-16 bg-gray-100 overflow-hidden"
+  >
+    <!-- Moving Gradient Balls -->
+    <div
+      class="absolute top-0 left-0 w-72 h-72 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full opacity-50 animate-pulse"
+    ></div>
+    <div
+      class="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full opacity-50 animate-pulse delay-2000"
+    ></div>
+
+    <div
+      class="container mx-auto px-8 flex flex-col md:flex-row items-center relative z-10"
+    >
       <div ref="image" class="w-full md:w-1/2 mb-8 md:mb-0">
         <img
           src="/new.jpeg"
           alt="About Image"
-          class="rounded-lg shadow-lg w-full"
+          class="rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-500"
         />
       </div>
       <div ref="text" class="w-full md:w-1/2 md:pl-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-gray-800">
           About Me
         </h2>
-        <p class="text-lg text-gray-600 mb-4">
+        <p class="text-lg text-gray-600 mb-4 leading-relaxed">
           I am a creative freelancer with a passion for photoshoots, video
           editing, logo designing, magazine making, and graphic designing. I
           strive to create visually appealing and engaging content that meets
           the needs of my clients.
         </p>
         <button
-          class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors duration-300"
+          class="px-6 py-3 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 hover:shadow-2xl transition-all duration-300"
         >
           Learn More
         </button>
@@ -52,43 +65,36 @@ export default {
         },
       });
 
-      // Image animation
       tl.from(image, {
         x: -100,
         opacity: 0,
         duration: 1.5,
         ease: "power3.out",
-      })
-
-        // Text animation
-        .from(
-          text,
-          {
-            x: 100,
-            opacity: 0,
-            duration: 1.5,
-            ease: "power3.out",
-          },
-          "-=1.2"
-        );
-
-      // Button animation with scale and rotation
-      tl.from(
-        text.querySelector("button"),
+        stagger: 0.5,
+      }).from(
+        text,
         {
-          scale: 0.9,
-          rotate: 15,
+          x: 100,
           opacity: 0,
-          duration: 1,
-          ease: "elastic.out(1, 0.5)",
+          duration: 1.5,
+          ease: "power3.out",
         },
-        "-=1"
+        "-=1.2"
       );
+
+      // Additional subtle animations for background elements
+      gsap.to(".animate-pulse", {
+        y: 20,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        duration: 4,
+      });
     },
   },
 };
 </script>
 
 <style scoped>
-/* Custom styles if needed */
+/* Custom styles for enhancing visual appeal */
 </style>
