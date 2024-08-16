@@ -4,7 +4,7 @@ import PortfolioSection from "../components/portfolio/PortfolioSection.vue";
 import PricingSection from "../components/pricing/PricingSection.vue";
 import AboutSection from "../components/AboutSection.vue";
 import ContactSection from "../components/ContactForm.vue";
-import TestimonialsSection from "../components/testimonials/TestimonialsSection.vue"; // Import TestimonialsSection
+import TestimonialsSection from "../components/Testimonials/TestimonialsSection.vue"; // Import TestimonialsSection
 
 const routes = [
   {
