@@ -1,14 +1,14 @@
 <template>
   <div
-    class="portfolio-card relative overflow-hidden rounded-xl shadow-lg bg-gray-100 hover:bg-gray-200 transition-all duration-300"
+    class="portfolio-card relative overflow-hidden rounded-xl shadow-lg bg-gray-100 transition-all duration-300"
   >
     <img
       :src="project.image"
       :alt="project.title"
-      class="card-image w-full h-64 object-cover transform transition-transform duration-500 hover:scale-105"
+      class="card-image w-full h-64 object-cover transform transition-transform duration-500"
     />
     <div
-      class="card-overlay absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-4"
+      class="card-overlay absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 transition-opacity duration-500 flex flex-col justify-end p-4"
     >
       <h3 class="text-white text-lg font-semibold">{{ project.title }}</h3>
       <p class="text-white text-sm mt-2">{{ project.description }}</p>
@@ -29,11 +29,17 @@ export default {
       required: true,
     },
   },
+  watch: {
+    project() {
+      this.initScrollAnimation();
+    },
+  },
   mounted() {
     this.initScrollAnimation();
   },
   methods: {
     initScrollAnimation() {
+      // Main card animation
       gsap.fromTo(
         this.$el,
         { opacity: 0, y: 50 },
@@ -51,6 +57,7 @@ export default {
         }
       );
 
+      // Image zoom animation
       gsap.fromTo(
         this.$el.querySelector(".card-image"),
         { scale: 1.05 },
@@ -67,6 +74,7 @@ export default {
         }
       );
 
+      // Overlay fade-in animation
       gsap.fromTo(
         this.$el.querySelector(".card-overlay"),
         { opacity: 0 },
@@ -88,11 +96,5 @@ export default {
 </script>
 
 <style scoped>
-.portfolio-card:hover .card-overlay {
-  opacity: 1;
-}
-
-.portfolio-card:hover .card-image {
-  transform: scale(1.05);
-}
+/* Removed hover-specific styles as GSAP handles it */
 </style>

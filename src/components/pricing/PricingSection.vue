@@ -41,13 +41,15 @@ export default {
 
       gsap.fromTo(
         ".pricing-card",
-        { opacity: 0, y: 50 },
+        { opacity: 0, y: 100, scale: 0.8, rotationX: 30 },
         {
           opacity: 1,
           y: 0,
-          duration: 0.8,
-          ease: "power3.out",
-          stagger: 0.3,
+          scale: 1,
+          rotationX: 0,
+          duration: 1.2,
+          ease: "power4.out",
+          stagger: 0.2,
           scrollTrigger: {
             trigger: ".pricing-card",
             start: "top 80%",
@@ -57,6 +59,26 @@ export default {
           },
         }
       );
+
+      // Adding a subtle glow effect on hover to make it more interactive
+      gsap.utils.toArray(".pricing-card").forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          gsap.to(card, {
+            boxShadow: "0px 0px 20px rgba(0,0,0,0.2)",
+            scale: 1.05,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        });
+        card.addEventListener("mouseleave", () => {
+          gsap.to(card, {
+            boxShadow: "0px 0px 0px rgba(0,0,0,0)",
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out",
+          });
+        });
+      });
     },
   },
 };

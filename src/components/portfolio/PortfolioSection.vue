@@ -5,6 +5,7 @@
         My Portfolio
       </h2>
 
+      <!-- Filter Buttons -->
       <div class="flex justify-center mb-12 space-x-4">
         <FilterButton
           v-for="(skill, index) in skills"
@@ -15,6 +16,7 @@
         />
       </div>
 
+      <!-- Projects Grid -->
       <transition-group
         name="fade"
         tag="div"
@@ -47,23 +49,50 @@ export default {
   },
   data() {
     return {
-      skills: portfolioData.skills,
-      activeSkill: "Photography",
+      skills: [{ name: "Best" }, ...portfolioData.skills], // Add "Best" category
+      activeSkill: "Best", // Set "Best" as the default
+      activeSubcategory: "", // Initially empty, used for other categories
     };
   },
   computed: {
     filteredProjects() {
-      const skill = this.skills.find(
-        (skill) => skill.name === this.activeSkill
-      );
-      return skill ? skill.projects : [];
+      if (this.activeSkill === "Best") {
+        // If the "Best" category is active, randomly select projects from all subcategories
+        let allProjects = [];
+        this.skills.slice(1).forEach((skill) => {
+          skill.subcategories.forEach((subcat) => {
+            allProjects = [...allProjects, ...subcat.projects];
+          });
+        });
+        return allProjects.sort(() => 0.5 - Math.random()).slice(0, 6); // Return a random selection of 6 projects
+      } else {
+        const skill = this.skills.find(
+          (skill) => skill.name === this.activeSkill
+        );
+        if (!skill) return [];
+
+        const subcategory = skill.subcategories.find(
+          (subcat) => subcat.name === this.activeSubcategory
+        );
+
+        return subcategory ? subcategory.projects : [];
+      }
     },
   },
   methods: {
-    setActiveSkill(skillName) {
-      this.activeSkill = skillName;
-      this.animateProjects();
+    setActiveSkill({ mainCategory, subCategory }) {
+      console.log("Main Category:", mainCategory, "Sub Category:", subCategory); // Debugging log
+      this.activeSkill = mainCategory;
+
+      if (mainCategory === "Best") {
+        this.activeSubcategory = ""; // Reset subcategory for "Best"
+      } else {
+        this.activeSubcategory = subCategory; // Set subcategory for other skills
+      }
+
+      this.animateProjects(); // Re-trigger the animation
     },
+
     animateProjects() {
       gsap.fromTo(
         ".portfolio-card",
@@ -85,7 +114,7 @@ export default {
     },
   },
   mounted() {
-    this.animateProjects();
+    this.animateProjects(); // Initial animation on mount
   },
 };
 </script>
@@ -95,7 +124,8 @@ export default {
 .fade-leave-active {
   transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
 }
 </style>

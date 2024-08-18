@@ -72,8 +72,8 @@
           </div>
 
           <button
-            type="submit animate__animated animate__fadeInUp animate__delay-1s"
-            class="w-full py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition"
+            type="submit"
+            class="w-full py-3 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 transition animate__animated animate__fadeInUp animate__delay-1s"
           >
             Send Message
           </button>
@@ -138,26 +138,51 @@ export default {
     };
   },
   mounted() {
-    // GSAP animations
+    // Enhanced GSAP animations for "Beast Mode"
     gsap.from("form", {
       duration: 1.5,
-      y: 50,
+      y: 100,
       opacity: 0,
-      ease: "power3.out",
+      scale: 0.9,
+      rotationX: 15,
+      ease: "power4.out",
+      scrollTrigger: {
+        trigger: "form",
+        start: "top 80%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        once: true,
+      },
     });
+
     gsap.from(".animate__fadeInUp", {
       y: 50,
       opacity: 0,
-      duration: 1,
-      ease: "power3.out",
+      duration: 1.2,
+      ease: "power4.out",
       stagger: 0.2,
+      scrollTrigger: {
+        trigger: "form",
+        start: "top 90%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        once: true,
+      },
     });
 
     gsap.from(".animate__fadeInDown", {
       y: -50,
       opacity: 0,
-      duration: 1,
-      ease: "power3.out",
+      duration: 1.2,
+      ease: "power4.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "form",
+        start: "top 90%",
+        end: "bottom 60%",
+        toggleActions: "play none none none",
+        once: true,
+      },
     });
   },
   methods: {

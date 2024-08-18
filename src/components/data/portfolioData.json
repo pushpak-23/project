@@ -1,65 +1,172 @@
 {
   "skills": [
     {
-      "name": "Photography",
-      "projects": [
+      "name": "Graphic Design",
+      "subcategories": [
         {
-          "title": "Wedding Photography",
-          "description": "Beautiful wedding photography capturing precious moments.",
-          "image": "/new.jpeg",
-          "link": "https://plus.unsplash.com/premium_photo-1710385174244-78d7f68ae13d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "name": "Visual Identity Design",
+          "projects": [
+            {
+              "title": "Logo & Branding for Tech Company",
+              "description": "Developed a modern and dynamic logo and branding package for a tech startup.",
+              "image": "/images/branding-tech-company.jpg",
+              "link": "https://example.com/branding-tech-company"
+            }
+          ]
         },
         {
-          "title": "Nature Photography",
-          "description": "Stunning nature photography from around the world.",
-          "image": "/images/nature-photography.jpg",
-          "link": "https://example.com/nature-photography"
+          "name": "Marketing & Advertising Design",
+          "projects": [
+            {
+              "title": "Digital Ads Campaign",
+              "description": "Created an effective digital ads campaign for a global fashion brand.",
+              "image": "/images/digital-ads-campaign.jpg",
+              "link": "https://example.com/digital-ads-campaign"
+            },
+            {
+              "title": "Flyer Design for Local Event",
+              "description": "Designed eye-catching flyers for a local community event.",
+              "image": "/images/event-flyer.jpg",
+              "link": "https://example.com/event-flyer"
+            }
+          ]
         },
         {
-          "title": "Wedding Photography",
-          "description": "Beautiful wedding photography capturing precious moments.",
-          "image": "/images/wedding-photography.jpg",
-          "link": "https://example.com/wedding-photography"
+          "name": "User Interface",
+          "projects": [
+            {
+              "title": "E-commerce UI Design",
+              "description": "Designed a sleek and user-friendly interface for an e-commerce platform.",
+              "image": "/images/ecommerce-ui.jpg",
+              "link": "https://example.com/ecommerce-ui"
+            }
+          ]
         },
         {
-          "title": "Wedding Photography",
-          "description": "Beautiful wedding photography capturing precious moments.",
-          "image": "/images/wedding-photography.jpg",
-          "link": "https://example.com/wedding-photography"
+          "name": "Publications Design",
+          "projects": [
+            {
+              "title": "Fashion Magazine",
+              "description": "Modern and stylish fashion magazine design.",
+              "image": "/images/fashion-magazine.jpg",
+              "link": "https://example.com/fashion-magazine"
+            }
+          ]
         },
         {
-          "title": "Wedding Photography",
-          "description": "Beautiful wedding photography capturing precious moments.",
-          "image": "/images/wedding-photography.jpg",
-          "link": "https://example.com/wedding-photography"
+          "name": "Packaging Design",
+          "projects": [
+            {
+              "title": "Product Packaging for Organic Foods",
+              "description": "Designed eco-friendly packaging for an organic food brand.",
+              "image": "/images/organic-packaging.jpg",
+              "link": "https://example.com/organic-packaging"
+            }
+          ]
         },
         {
-          "title": "Wedding Photography",
-          "description": "Beautiful wedding photography capturing precious moments.",
-          "image": "/images/wedding-photography.jpg",
-          "link": "https://example.com/wedding-photography"
-        }
-      ]
-    },
-    {
-      "name": "Magazine Design",
-      "projects": [
-        {
-          "title": "Fashion Magazine",
-          "description": "Modern and stylish fashion magazine design.",
-          "image": "/images/fashion-magazine.jpg",
-          "link": "https://example.com/fashion-magazine"
+          "name": "Art & Illustration",
+          "projects": [
+            {
+              "title": "Custom T-Shirt Design",
+              "description": "Illustrated unique T-shirt designs for a streetwear brand.",
+              "image": "/images/tshirt-design.jpg",
+              "link": "https://example.com/tshirt-design"
+            },
+            {
+              "title": "Poster Design for Music Festival",
+              "description": "Created a vibrant poster design for a local music festival.",
+              "image": "/images/music-festival-poster.jpg",
+              "link": "https://example.com/music-festival-poster"
+            }
+          ]
         }
       ]
     },
     {
       "name": "Videography",
-      "projects": [
+      "subcategories": [
         {
-          "title": "Music Video",
-          "description": "Creative and energetic music video production.",
-          "image": "/images/music-video.jpg",
-          "link": "https://example.com/music-video"
+          "name": "Reels",
+          "projects": [
+            {
+              "title": "Instagram Reels for Fashion Influencer",
+              "description": "Produced engaging Instagram reels for a popular fashion influencer.",
+              "image": "/images/fashion-reels.jpg",
+              "link": "https://example.com/fashion-reels"
+            }
+          ]
+        },
+        {
+          "name": "Cinematic Video",
+          "projects": [
+            {
+              "title": "Short Film Production",
+              "description": "Directed and edited a cinematic short film.",
+              "image": "/images/cinematic-short-film.jpg",
+              "link": "https://example.com/cinematic-short-film"
+            }
+          ]
+        },
+        {
+          "name": "News and Broadcast",
+          "projects": [
+            {
+              "title": "Broadcast News Editing",
+              "description": "Edited and produced news segments for a television network.",
+              "image": "/images/broadcast-news.jpg",
+              "link": "https://example.com/broadcast-news"
+            }
+          ]
+        },
+        {
+          "name": "Vlog Editor",
+          "projects": [
+            {
+              "title": "Travel Vlog Editing",
+              "description": "Edited travel vlogs for a YouTube content creator.",
+              "image": "/images/travel-vlog.jpg",
+              "link": "https://example.com/travel-vlog"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Photography",
+      "subcategories": [
+        {
+          "name": "Light Photography",
+          "projects": [
+            {
+              "title": "Outdoor Portraits",
+              "description": "Captured beautiful outdoor portraits using natural light.",
+              "image": "/images/outdoor-portraits.jpg",
+              "link": "https://example.com/outdoor-portraits"
+            }
+          ]
+        },
+        {
+          "name": "Night Photography",
+          "projects": [
+            {
+              "title": "Cityscape at Night",
+              "description": "Photographed stunning cityscapes during the night.",
+              "image": "/images/night-cityscape.jpg",
+              "link": "https://example.com/night-cityscape"
+            }
+          ]
+        },
+        {
+          "name": "Food Photography",
+          "projects": [
+            {
+              "title": "Gourmet Food Photography",
+              "description": "Shot high-quality images of gourmet dishes for a restaurant menu.",
+              "image": "/images/food-photography.jpg",
+              "link": "https://example.com/food-photography"
+            }
+          ]
         }
       ]
     }

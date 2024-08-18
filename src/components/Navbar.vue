@@ -1,12 +1,13 @@
 <template>
   <nav
-    class="fixed top-0 left-0 w-full z-20 bg-black bg-opacity-40 backdrop-blur-md shadow-lg p-4"
+    class="fixed top-0 left-0 w-full z-20 bg-black bg-opacity-40 backdrop-blur-md shadow-lg p-4 transition-all duration-500"
+    :class="{ 'bg-opacity-90': scrolled }"
     ref="navbar"
   >
     <div class="container mx-auto flex justify-between items-center">
       <!-- Logo -->
       <div class="text-white font-bold text-2xl" ref="logo">
-        <router-link to="/"> Freelancer</router-link>
+        <router-link to="/">Freelancer</router-link>
       </div>
 
       <!-- Hamburger Menu for Mobile -->
@@ -47,51 +48,24 @@
         class="absolute md:static top-16 left-0 w-full md:w-auto p-4 md:p-0"
         ref="navLinks"
       >
-        <li>
+        <li v-for="link in links" :key="link.text">
           <router-link
-            to="#about"
-            class="block py-2 md:py-0 hover:text-blue-500 transition-colors duration-300"
-            >About</router-link
+            :to="link.to"
+            class="block py-2 md:py-0 hover:text-blue-500 transition-colors duration-300 hover:scale-110"
           >
-        </li>
-        <li>
-          <router-link
-            to="#portfolio"
-            class="block py-2 md:py-0 hover:text-blue-500 transition-colors duration-300"
-            >Portfolio</router-link
-          >
-        </li>
-        <li>
-          <router-link
-            to="#pricing"
-            class="block py-2 md:py-0 hover:text-blue-500 transition-colors duration-300"
-            >Pricing</router-link
-          >
-        </li>
-
-        <li>
-          <router-link
-            to="#testimonials"
-            class="block py-2 md:py-0 hover:text-blue-500 transition-colors duration-300"
-            >Testimonials</router-link
-          >
-        </li>
-        <li>
-          <router-link
-            to="#contact"
-            class="block py-2 md:py-0 hover:text-blue-500 transition-colors duration-300"
-            >Contact</router-link
-          >
+            {{ link.text }}
+          </router-link>
         </li>
       </ul>
 
       <!-- CTA Button -->
-      <button
-        class="hidden md:block px-4 py-2 text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-colors duration-300"
+      <router-link
+        to="#contact"
+        class="hidden md:inline-block px-4 py-2 text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-colors duration-300"
         ref="ctaButton"
       >
-        <router-link to="#contact"> Hire Me</router-link>
-      </button>
+        Hire Me
+      </router-link>
     </div>
   </nav>
 </template>
@@ -103,29 +77,33 @@ export default {
   data() {
     return {
       mobileMenuOpen: false,
+      scrolled: false,
+      links: [
+        { text: "About", to: "#about" },
+        { text: "Portfolio", to: "#portfolio" },
+        { text: "Pricing", to: "#pricing" },
+        { text: "Testimonials", to: "#testimonials" },
+        { text: "Contact", to: "#contact" },
+      ],
     };
   },
   methods: {
     toggleMenu() {
       this.mobileMenuOpen = !this.mobileMenuOpen;
-      if (this.mobileMenuOpen) {
-        gsap.to(this.$refs.navLinks, {
-          duration: 0.5,
-          opacity: 1,
-          y: 0,
-          ease: "power2.out",
-        });
-      } else {
-        gsap.to(this.$refs.navLinks, {
-          duration: 0.5,
-          opacity: 0,
-          y: -20,
-          ease: "power2.in",
-        });
-      }
+      gsap.to(this.$refs.navLinks, {
+        duration: 0.5,
+        opacity: this.mobileMenuOpen ? 1 : 0,
+        y: this.mobileMenuOpen ? 0 : -20,
+        ease: "power2.out",
+      });
+    },
+    handleScroll() {
+      this.scrolled = window.scrollY > 50;
     },
   },
   mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+
     // Logo Animation
     gsap.from(this.$refs.logo, {
       duration: 1,
@@ -170,9 +148,12 @@ export default {
       delay: 0.5,
     });
   },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
 };
 </script>
 
 <style scoped>
-/* Custom styles for the navbar, if necessary */
+/* Custom styles for the navbar */
 </style>

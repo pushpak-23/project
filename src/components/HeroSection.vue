@@ -14,7 +14,7 @@
 
     <!-- Glassmorphism Container -->
     <div
-      class="relative z-10 p-8 max-w-lg bg-white bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 duration-500 ease-out"
+      class="relative z-10 p-8 max-w-lg bg-white bg-opacity-20 backdrop-blur-lg rounded-lg shadow-lg text-center transform transition-transform duration-500"
       ref="glassContainer"
     >
       <h1 class="text-4xl md:text-6xl font-bold text-white" ref="heading">
@@ -36,62 +36,82 @@
 
 <script>
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "./Navbar.vue";
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   components: {
     Navbar,
   },
   mounted() {
-    // Animate the glassmorphism container
-    gsap.from(this.$refs.glassContainer, {
-      duration: 1,
+    // Timeline for staggered animations
+    const tl = gsap.timeline({ delay: 0.5 });
+
+    tl.from(this.$refs.glassContainer, {
+      duration: 1.5,
       opacity: 0,
       y: 50,
-      ease: "power2.out",
+      ease: "power4.out",
+    })
+      .from(
+        this.$refs.heading,
+        {
+          opacity: 0,
+          y: -50,
+          duration: 1.2,
+          ease: "back.out(1.7)",
+        },
+        "-=1"
+      )
+      .from(
+        this.$refs.description,
+        {
+          opacity: 0,
+          y: -30,
+          duration: 1.2,
+          ease: "back.out(1.7)",
+        },
+        "-=0.8"
+      )
+      .from(
+        this.$refs.ctaButton,
+        {
+          opacity: 0,
+          y: 30,
+          duration: 1.2,
+          ease: "back.out(1.7)",
+        },
+        "-=0.6"
+      );
+
+    // Parallax effect on mouse move
+    document.addEventListener("mousemove", (e) => {
+      const x = (window.innerWidth - e.pageX * 2) / 100;
+      const y = (window.innerHeight - e.pageY * 2) / 100;
+      gsap.to(this.$refs.glassContainer, {
+        x: x,
+        y: y,
+        ease: "power3.out",
+      });
     });
 
-    // Animate the heading
-    gsap.from(this.$refs.heading, {
-      duration: 1,
-      opacity: 0,
-      y: -50,
-      ease: "power2.out",
-      delay: 0.5,
-    });
-
-    // Animate the description
-    gsap.from(this.$refs.description, {
-      duration: 1,
-      opacity: 0,
-      y: -30,
-      ease: "power2.out",
-      delay: 1,
-    });
-
-    // Animate the CTA button
-    gsap.from(this.$refs.ctaButton, {
-      duration: 1,
-      opacity: 0,
-      y: 30,
-      ease: "power2.out",
-      delay: 1.5,
-    });
-
-    // Add hover animation
+    // Enhanced hover animation
     this.$refs.glassContainer.addEventListener("mouseenter", () => {
       gsap.to(this.$refs.glassContainer, {
-        scale: 1.1,
-        duration: 0.3,
-        ease: "power2.out",
+        scale: 1.15,
+        rotate: 2,
+        duration: 0.5,
+        ease: "elastic.out(1, 0.5)",
       });
     });
 
     this.$refs.glassContainer.addEventListener("mouseleave", () => {
       gsap.to(this.$refs.glassContainer, {
         scale: 1,
-        duration: 0.3,
-        ease: "power2.out",
+        rotate: 0,
+        duration: 0.5,
+        ease: "elastic.out(1, 0.5)",
       });
     });
   },
