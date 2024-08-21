@@ -1,5 +1,4 @@
 <template>
-  <Navbar />
   <section
     class="relative h-screen flex items-center justify-center overflow-hidden"
   >
@@ -10,6 +9,8 @@
       autoplay
       muted
       loop
+      playsinline
+      preload="auto"
     ></video>
 
     <!-- Glassmorphism Container -->
@@ -36,82 +37,75 @@
 
 <script>
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Navbar from "./Navbar.vue";
-gsap.registerPlugin(ScrollTrigger);
 
 export default {
-  components: {
-    Navbar,
-  },
   mounted() {
-    // Timeline for staggered animations
-    const tl = gsap.timeline({ delay: 0.5 });
+    this.$nextTick(() => {
+      const tl = gsap.timeline({ delay: 0.5 });
 
-    tl.from(this.$refs.glassContainer, {
-      duration: 1.5,
-      opacity: 0,
-      y: 50,
-      ease: "power4.out",
-    })
-      .from(
-        this.$refs.heading,
-        {
-          opacity: 0,
-          y: -50,
-          duration: 1.2,
-          ease: "back.out(1.7)",
-        },
-        "-=1"
-      )
-      .from(
-        this.$refs.description,
-        {
-          opacity: 0,
-          y: -30,
-          duration: 1.2,
-          ease: "back.out(1.7)",
-        },
-        "-=0.8"
-      )
-      .from(
-        this.$refs.ctaButton,
-        {
-          opacity: 0,
-          y: 30,
-          duration: 1.2,
-          ease: "back.out(1.7)",
-        },
-        "-=0.6"
-      );
+      tl.from(this.$refs.glassContainer, {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        ease: "power4.out",
+      })
+        .from(
+          this.$refs.heading,
+          {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "back.out(1.7)",
+          },
+          "-=0.8"
+        )
+        .from(
+          this.$refs.description,
+          {
+            opacity: 0,
+            y: -30,
+            duration: 1,
+            ease: "back.out(1.7)",
+          },
+          "-=0.6"
+        )
+        .from(
+          this.$refs.ctaButton,
+          {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            ease: "back.out(1.7)",
+          },
+          "-=0.4"
+        );
 
-    // Parallax effect on mouse move
-    document.addEventListener("mousemove", (e) => {
-      const x = (window.innerWidth - e.pageX * 2) / 100;
-      const y = (window.innerHeight - e.pageY * 2) / 100;
-      gsap.to(this.$refs.glassContainer, {
-        x: x,
-        y: y,
-        ease: "power3.out",
+      document.addEventListener("mousemove", (e) => {
+        const x = (window.innerWidth - e.pageX * 2) / 100;
+        const y = (window.innerHeight - e.pageY * 2) / 100;
+        gsap.to(this.$refs.glassContainer, {
+          x: x,
+          y: y,
+          ease: "power3.out",
+        });
       });
-    });
 
-    // Enhanced hover animation
-    this.$refs.glassContainer.addEventListener("mouseenter", () => {
-      gsap.to(this.$refs.glassContainer, {
-        scale: 1.15,
-        rotate: 2,
-        duration: 0.5,
-        ease: "elastic.out(1, 0.5)",
+      this.$refs.glassContainer.addEventListener("mouseenter", () => {
+        gsap.to(this.$refs.glassContainer, {
+          scale: 1.15,
+          rotate: 2,
+          duration: 0.5,
+          ease: "elastic.out(1, 0.5)",
+        });
       });
-    });
 
-    this.$refs.glassContainer.addEventListener("mouseleave", () => {
-      gsap.to(this.$refs.glassContainer, {
-        scale: 1,
-        rotate: 0,
-        duration: 0.5,
-        ease: "elastic.out(1, 0.5)",
+      this.$refs.glassContainer.addEventListener("mouseleave", () => {
+        gsap.to(this.$refs.glassContainer, {
+          scale: 1,
+          rotate: 0,
+          duration: 0.5,
+          ease: "elastic.out(1, 0.5)",
+        });
       });
     });
   },

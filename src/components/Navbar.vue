@@ -102,50 +102,52 @@ export default {
     },
   },
   mounted() {
-    window.addEventListener("scroll", this.handleScroll);
+    this.$nextTick(() => {
+      window.addEventListener("scroll", this.handleScroll);
 
-    // Logo Animation
-    gsap.from(this.$refs.logo, {
-      duration: 1,
-      opacity: 0,
-      y: -50,
-      ease: "power2.out",
-      delay: 0.5,
-    });
+      // Logo Animation
+      gsap.from(this.$refs.logo, {
+        duration: 1,
+        opacity: 0,
+        y: -50,
+        ease: "power2.out",
+        delay: 0.5,
+      });
 
-    // Navbar Animation
-    gsap.from(this.$refs.navbar, {
-      duration: 1,
-      opacity: 0,
-      y: -50,
-      ease: "power2.out",
-    });
+      // Navbar Animation
+      gsap.from(this.$refs.navbar, {
+        duration: 1,
+        opacity: 0,
+        y: -50,
+        ease: "power2.out",
+      });
 
-    // Links Animation
-    gsap.from(this.$refs.navLinks.children, {
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      ease: "power2.out",
-      stagger: 0.2,
-    });
+      // Links Animation
+      gsap.from(this.$refs.navLinks.children, {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        ease: "power2.out",
+        stagger: 0.2,
+      });
 
-    // CTA Button Animation
-    gsap.from(this.$refs.ctaButton, {
-      duration: 1,
-      opacity: 0,
-      y: 50,
-      ease: "power2.out",
-      delay: 1,
-    });
+      // CTA Button Animation
+      gsap.from(this.$refs.ctaButton, {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        ease: "power2.out",
+        delay: 1,
+      });
 
-    // Hamburger Icon Animation
-    gsap.from(this.$refs.hamburger, {
-      duration: 1,
-      opacity: 0,
-      rotate: 360,
-      ease: "elastic.out(1, 0.5)",
-      delay: 0.5,
+      // Hamburger Icon Animation
+      gsap.from(this.$refs.hamburger, {
+        duration: 1,
+        opacity: 0,
+        rotate: 360,
+        ease: "elastic.out(1, 0.5)",
+        delay: 0.5,
+      });
     });
   },
   beforeDestroy() {
@@ -155,5 +157,7 @@ export default {
 </script>
 
 <style scoped>
-/* Custom styles for the navbar */
+[v-cloak] {
+  display: none;
+}
 </style>

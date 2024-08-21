@@ -1,16 +1,30 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HeroSection from "../components/HeroSection.vue";
-import PortfolioSection from "../components/portfolio/PortfolioSection.vue";
-import PricingSection from "../components/pricing/PricingSection.vue";
-import AboutSection from "../components/AboutSection.vue";
-import ContactSection from "../components/ContactForm.vue";
-// import TestimonialsSection from "../components/Testimonials/TestimonialsSection.vue"; // Import TestimonialsSection
 
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HeroSection,
+    component: () => import("../components/HeroSection.vue"), // Lazy load HeroSection
+  },
+  {
+    path: "/portfolio",
+    name: "portfolio",
+    component: () => import("../components/portfolio/PortfolioSection.vue"), // Lazy load PortfolioSection
+  },
+  {
+    path: "/pricing",
+    name: "pricing",
+    component: () => import("../components/pricing/PricingSection.vue"), // Lazy load PricingSection
+  },
+  {
+    path: "/about",
+    name: "about",
+    component: () => import("../components/AboutSection.vue"), // Lazy load AboutSection
+  },
+  {
+    path: "/contact",
+    name: "contact",
+    component: () => import("../components/ContactForm.vue"), // Lazy load ContactForm
   },
 ];
 
