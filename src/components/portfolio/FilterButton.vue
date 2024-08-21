@@ -81,10 +81,14 @@ export default {
           y: -10,
           duration: 0.3,
           ease: "power4.in",
+          onComplete: () => {
+            this.showSubcategories = false;
+          },
         });
       }
     },
   },
+
   methods: {
     selectSkill() {
       if (!this.skill.subcategories) {
@@ -92,6 +96,8 @@ export default {
           mainCategory: this.skill.name,
           subCategory: "",
         });
+      } else {
+        this.showSubcategories = !this.showSubcategories; // Toggle dropdown
       }
     },
     toggleSubcategories(value) {
@@ -102,7 +108,11 @@ export default {
         mainCategory: this.skill.name,
         subCategory: subcategoryName,
       });
-      this.showSubcategories = false;
+
+      // Delay the dropdown closure slightly to allow the click event to process
+      setTimeout(() => {
+        this.showSubcategories = false;
+      }, 100);
     },
   },
 };

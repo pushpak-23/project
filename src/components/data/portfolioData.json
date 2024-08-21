@@ -7,9 +7,21 @@
           "name": "Visual Identity Design",
           "projects": [
             {
-              "title": "Logo & Branding for Tech Company",
+              "title": "New company",
               "description": "Developed a modern and dynamic logo and branding package for a tech startup.",
-              "image": "/images/branding-tech-company.jpg",
+              "image": "https://img.freepik.com/free-vector/flat-design-business-stationery-template_23-2151104835.jpg?t=st=1724218536~exp=1724222136~hmac=c2d856de270805c3eb3aa62653d109d4c9d5e2b7486157525902b4282b10e996&w=996",
+              "link": "https://example.com/branding-tech-company"
+            },
+            {
+              "title": "New company",
+              "description": "Developed a modern and dynamic logo and branding package for a tech startup.",
+              "image": "https://img.freepik.com/free-vector/modern-business-stationery-collection_23-2148369115.jpg?t=st=1724219348~exp=1724222948~hmac=3475100b6c657121e911f19b3c7d230ba7ac293a3b79586477d4f8c5f1226929&w=996",
+              "link": "https://example.com/branding-tech-company"
+            },
+            {
+              "title": "New company",
+              "description": "Developed a modern and dynamic logo and branding package for a tech startup.",
+              "image": "https://img.freepik.com/free-vector/flat-mosaic-brand-stationery-collection_23-2149056304.jpg?t=st=1724219590~exp=1724223190~hmac=eb91cb18f081eac3db245d5aa05ecaeae364819c6f64a66a5b16a6a5d0a2f593&w=996",
               "link": "https://example.com/branding-tech-company"
             }
           ]
@@ -20,13 +32,19 @@
             {
               "title": "Digital Ads Campaign",
               "description": "Created an effective digital ads campaign for a global fashion brand.",
-              "image": "/images/digital-ads-campaign.jpg",
+              "image": "https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?t=st=1724219740~exp=1724223340~hmac=98010e2c07645149a76aea244804df57b9b6ddb1174d370063bd5b4b0e012f5d&w=996",
               "link": "https://example.com/digital-ads-campaign"
             },
             {
               "title": "Flyer Design for Local Event",
               "description": "Designed eye-catching flyers for a local community event.",
-              "image": "/images/event-flyer.jpg",
+              "image": "https://img.freepik.com/free-photo/marketing-ideas-share-research-planning-concept_53876-127431.jpg?t=st=1724219809~exp=1724223409~hmac=9d9efebdca9910b9ab811ef73a58ac0a835aa3799f83f99b2bfa660cd4e56275&w=740",
+              "link": "https://example.com/event-flyer"
+            },
+            {
+              "title": "Flyer Design for Local Event",
+              "description": "Designed eye-catching flyers for a local community event.",
+              "image": "https://img.freepik.com/free-vector/marketing-campaign-flat-background_23-2147999408.jpg?t=st=1724219841~exp=1724223441~hmac=39e4a643d38069b2f60664a85a49700b7914d875ac5169870da97db26449038c&w=740",
               "link": "https://example.com/event-flyer"
             }
           ]
@@ -37,7 +55,19 @@
             {
               "title": "E-commerce UI Design",
               "description": "Designed a sleek and user-friendly interface for an e-commerce platform.",
-              "image": "/images/ecommerce-ui.jpg",
+              "image": "https://img.freepik.com/free-vector/gradient-ui-ux-background_23-2149051556.jpg?t=st=1724222703~exp=1724226303~hmac=d609bd49b9e9b5b90adc912de1b436ed65b713382515bfd350a366da641e14e1&w=996",
+              "link": "https://example.com/ecommerce-ui"
+            },
+            {
+              "title": "E-commerce UI Design",
+              "description": "Designed a sleek and user-friendly interface for an e-commerce platform.",
+              "image": "https://img.freepik.com/free-vector/gradient-ui-ux-elements-collection_79603-1923.jpg?t=st=1724222742~exp=1724226342~hmac=3c590ff8359cb044036b42d9a55479b7b52b87ca3a19e2be4d4e36fe2a33ffc3&w=996",
+              "link": "https://example.com/ecommerce-ui"
+            },
+            {
+              "title": "E-commerce UI Design",
+              "description": "Designed a sleek and user-friendly interface for an e-commerce platform.",
+              "image": "https://img.freepik.com/free-vector/flat-design-ui-kit-collection_23-2149196761.jpg?t=st=1724222771~exp=1724226371~hmac=9a8da56075d056ef19555222f6a946f54dc0f89ee4abb7284e980757ca86a79d&w=740",
               "link": "https://example.com/ecommerce-ui"
             }
           ]
@@ -48,7 +78,19 @@
             {
               "title": "Fashion Magazine",
               "description": "Modern and stylish fashion magazine design.",
-              "image": "/images/fashion-magazine.jpg",
+              "image": "https://img.freepik.com/free-vector/magazine-cover-collection-with-photo_23-2148878209.jpg?t=st=1724222858~exp=1724226458~hmac=42e07d4f33f802640c710c790eec63460f19dad702ec6d728a883c6d1c7dad72&w=996",
+              "link": "https://example.com/fashion-magazine"
+            },
+            {
+              "title": "publication",
+              "description": "Modern and stylish fashion magazine design.",
+              "image": "https://img.freepik.com/free-vector/multicolor-flyer-design_1375-80.jpg?t=st=1724222949~exp=1724226549~hmac=06b65f8e3c5c1d24b9fe587abe77290103d2074f0a68957f85ab1390b75a3510&w=740",
+              "link": "https://example.com/fashion-magazine"
+            },
+            {
+              "title": "Fashion Magazine",
+              "description": "Modern and stylish fashion magazine design.",
+              "image": "https://img.freepik.com/free-vector/detailed-fashion-magazine-cover_23-2148895770.jpg?t=st=1724222890~exp=1724226490~hmac=fa962c005e6dd9b7c4f71be55e85e666e6f71643e4dcef78f75bac2615802e38&w=740",
               "link": "https://example.com/fashion-magazine"
             }
           ]
@@ -59,7 +101,19 @@
             {
               "title": "Product Packaging for Organic Foods",
               "description": "Designed eco-friendly packaging for an organic food brand.",
-              "image": "/images/organic-packaging.jpg",
+              "image": "https://img.freepik.com/free-psd/paper-coffee-bags-mockup_58466-11166.jpg?t=st=1724223010~exp=1724226610~hmac=f1a96baa5df8ea805675a0d9a218f5855bece6fabd4a4f7fe63b43f7cf739d9b&w=826",
+              "link": "https://example.com/organic-packaging"
+            },
+            {
+              "title": "Product Packaging for Organic Foods",
+              "description": "Designed eco-friendly packaging for an organic food brand.",
+              "image": "https://img.freepik.com/free-psd/pink-gift-box-mock-up_1307-595.jpg?t=st=1724223055~exp=1724226655~hmac=769dda8d6d40f44a042811e44aaea91cdd0decc1c39a4c3eb3dccb0b33b2200d&w=740",
+              "link": "https://example.com/organic-packaging"
+            },
+            {
+              "title": "Product Packaging for Organic Foods",
+              "description": "Designed eco-friendly packaging for an organic food brand.",
+              "image": "https://img.freepik.com/free-psd/beauty-product-mockup_1310-941.jpg?t=st=1724223070~exp=1724226670~hmac=80ab5eb4705aa22c6560e2b6ad33fe496340ed48eb01431b4b612d38fb8a88e2&w=996",
               "link": "https://example.com/organic-packaging"
             }
           ]
@@ -70,14 +124,20 @@
             {
               "title": "Custom T-Shirt Design",
               "description": "Illustrated unique T-shirt designs for a streetwear brand.",
-              "image": "/images/tshirt-design.jpg",
+              "image": "https://img.freepik.com/free-vector/hand-drawn-design-streetwear-illustration_23-2149845843.jpg?t=st=1724223166~exp=1724226766~hmac=9a31c60cbbd4457ddfc64a610aac9796dd077cddfec30b5f321aa70c4b0e1610&w=996",
               "link": "https://example.com/tshirt-design"
             },
             {
               "title": "Poster Design for Music Festival",
               "description": "Created a vibrant poster design for a local music festival.",
-              "image": "/images/music-festival-poster.jpg",
+              "image": "https://img.freepik.com/free-photo/watercolor-elephant-illustration_23-2151549685.jpg?t=st=1724223110~exp=1724226710~hmac=f56c09ca97baabd39f0907c3c366914e2bc71dca599afda88e5ee8ebd694ae9b&w=360",
               "link": "https://example.com/music-festival-poster"
+            },
+            {
+              "title": "Custom T-Shirt Design",
+              "description": "Illustrated unique T-shirt designs for a streetwear brand.",
+              "image": "https://img.freepik.com/free-vector/t-shirt-design-samples-with-illustration-wheel-with-wings_1284-44576.jpg?t=st=1724223189~exp=1724226789~hmac=9897e26bef15b68a2b0305c66da2e26dbfb8397cdd7894cb8873e64cf7ca46be&w=900",
+              "link": "https://example.com/tshirt-design"
             }
           ]
         }
@@ -92,7 +152,19 @@
             {
               "title": "Instagram Reels for Fashion Influencer",
               "description": "Produced engaging Instagram reels for a popular fashion influencer.",
-              "image": "/images/fashion-reels.jpg",
+              "image": "https://img.freepik.com/free-photo/woman-presenting-new-clothes-camera_23-2148349526.jpg?t=st=1724223353~exp=1724226953~hmac=f60e1f12f4709edb6b2fe0d5c3d63c2cc0b05171ef145f971b2e5f4da5cd58b0&w=996",
+              "link": "https://example.com/fashion-reels"
+            },
+            {
+              "title": "Instagram Reels for Fashion Influencer",
+              "description": "Produced engaging Instagram reels for a popular fashion influencer.",
+              "image": "https://img.freepik.com/free-vector/abstract-magenta-instagram-stories-template_23-2148291565.jpg?t=st=1724223401~exp=1724227001~hmac=bb1a124b1353bd5a2e9e6e2ba0da39ce7dbee733f26ad0032d0da301fe906fd2&w=740",
+              "link": "https://example.com/fashion-reels"
+            },
+            {
+              "title": "Instagram Reels for Fashion Influencer",
+              "description": "Produced engaging Instagram reels for a popular fashion influencer.",
+              "image": "https://img.freepik.com/free-photo/close-up-woman-taking-mirror-photo_23-2149241372.jpg?t=st=1724223427~exp=1724227027~hmac=4f26df38709847fa8128737ff9d92c4525e6cd8835fdbf4bb3a4bef4e90988c0&w=360",
               "link": "https://example.com/fashion-reels"
             }
           ]
@@ -103,7 +175,19 @@
             {
               "title": "Short Film Production",
               "description": "Directed and edited a cinematic short film.",
-              "image": "/images/cinematic-short-film.jpg",
+              "image": "https://img.freepik.com/free-photo/man-filming-with-professional-camera_23-2149066342.jpg?t=st=1724223662~exp=1724227262~hmac=b24929adfaf4888cbf1d6df07ba574f570ce0c3022264ff2f467cd1a659bf686&w=996",
+              "link": "https://example.com/cinematic-short-film"
+            },
+            {
+              "title": "Short Film Production",
+              "description": "Directed and edited a cinematic short film.",
+              "image": "https://img.freepik.com/free-photo/concept-cinema-with-film-elements_23-2150063129.jpg?t=st=1724223723~exp=1724227323~hmac=cf3de364b66afc0af778825c8368aeb673397c4849a00bccd4d877ef3373dc29&w=360",
+              "link": "https://example.com/cinematic-short-film"
+            },
+            {
+              "title": "Short Film Production",
+              "description": "Directed and edited a cinematic short film.",
+              "image": "https://img.freepik.com/free-photo/man-filming-with-professional-camera-new-movie_23-2149066394.jpg?t=st=1724223740~exp=1724227340~hmac=a357eed302af6beca3ad983489cbf7bd7d0402677b96f507b79badb8e4295a3d&w=996",
               "link": "https://example.com/cinematic-short-film"
             }
           ]
@@ -114,7 +198,19 @@
             {
               "title": "Broadcast News Editing",
               "description": "Edited and produced news segments for a television network.",
-              "image": "/images/broadcast-news.jpg",
+              "image": "https://img.freepik.com/free-vector/live-breaking-news-template-style_23-2148509656.jpg?t=st=1724223801~exp=1724227401~hmac=137a742ea116f724ae231eaf2ff3a2ec518204a04b0eef794bd925fe151a6902&w=996",
+              "link": "https://example.com/broadcast-news"
+            },
+            {
+              "title": "Broadcast News Editing",
+              "description": "Edited and produced news segments for a television network.",
+              "image": "https://img.freepik.com/free-vector/banner-template-breaking-news_23-2148518833.jpg?t=st=1724223818~exp=1724227418~hmac=e2c6210c9793ac9eafd9dc11c526082c3f3707f4247971311b74ba3d1e88da52&w=996",
+              "link": "https://example.com/broadcast-news"
+            },
+            {
+              "title": "Broadcast News Editing",
+              "description": "Edited and produced news segments for a television network.",
+              "image": "https://img.freepik.com/free-photo/genious-teacher-winning-award_482257-85111.jpg?t=st=1724223841~exp=1724227441~hmac=cac7ea43eff904af9f2c2c1e3bf578e1e256c70e33007fd9fa5b8e1837777ecc&w=996",
               "link": "https://example.com/broadcast-news"
             }
           ]
@@ -125,7 +221,19 @@
             {
               "title": "Travel Vlog Editing",
               "description": "Edited travel vlogs for a YouTube content creator.",
-              "image": "/images/travel-vlog.jpg",
+              "image": "https://img.freepik.com/free-photo/male-traveler-montenegro-outdoors_23-2149040845.jpg?t=st=1724223891~exp=1724227491~hmac=67caaf5f9b704cbd36d2d02ae1d2855ec0bd3d7f862cd68b729ec598f11d466f&w=996",
+              "link": "https://example.com/travel-vlog"
+            },
+            {
+              "title": "Travel Vlog Editing",
+              "description": "Edited travel vlogs for a YouTube content creator.",
+              "image": "https://img.freepik.com/free-photo/young-man-with-bike-outdoors_23-2149003792.jpg?t=st=1724223927~exp=1724227527~hmac=db840ff3d6d8dc9dd7c9a76488b2bf3fe93c920417d081048d0432cd1f275b65&w=996",
+              "link": "https://example.com/travel-vlog"
+            },
+            {
+              "title": "Travel Vlog Editing",
+              "description": "Edited travel vlogs for a YouTube content creator.",
+              "image": "https://img.freepik.com/free-photo/smiling-bearded-man-sunglasses-sitting-modern-motorbike-outdoors-making-selfie-his-smartphone_171337-12698.jpg?t=st=1724223945~exp=1724227545~hmac=27a908f94ea4141dd3008d8f4e3d877ef9eb83dca0f256683cdb4b3f76a8c43f&w=996",
               "link": "https://example.com/travel-vlog"
             }
           ]
@@ -141,7 +249,19 @@
             {
               "title": "Outdoor Portraits",
               "description": "Captured beautiful outdoor portraits using natural light.",
-              "image": "/images/outdoor-portraits.jpg",
+              "image": "https://img.freepik.com/free-photo/portrait-woman-taking-photo-with-device-world-photography-day_23-2151704375.jpg?t=st=1724223998~exp=1724227598~hmac=ec043ed9747ca6349c18fb02b08be5b9f2c3efefecfdbec282b154847dea6586&w=360",
+              "link": "https://example.com/outdoor-portraits"
+            },
+            {
+              "title": "Outdoor Portraits",
+              "description": "Captured beautiful outdoor portraits using natural light.",
+              "image": "https://img.freepik.com/free-photo/vertical-shot-female-wearing-khaki-jacket-black-warm-hat-sitting-park_181624-56537.jpg?t=st=1724224034~exp=1724227634~hmac=5c4b9be4aa2ea95e026ad4f1cd1989cb3d5677c8f8ae2eb20b21d6d806afe7b6&w=360",
+              "link": "https://example.com/outdoor-portraits"
+            },
+            {
+              "title": "Outdoor Portraits",
+              "description": "Captured beautiful outdoor portraits using natural light.",
+              "image": "https://img.freepik.com/free-photo/portrait-woman-taking-photo-with-device-world-photography-day_23-2151704437.jpg?t=st=1724224049~exp=1724227649~hmac=979c6160f545ef0f92a1c8595591c8ed46fcb4fe16869e9bfc69b177a91954cb&w=360",
               "link": "https://example.com/outdoor-portraits"
             }
           ]
@@ -152,7 +272,19 @@
             {
               "title": "Cityscape at Night",
               "description": "Photographed stunning cityscapes during the night.",
-              "image": "/images/night-cityscape.jpg",
+              "image": "https://img.freepik.com/free-photo/silhouette-man-dog_181624-18604.jpg?t=st=1724224103~exp=1724227703~hmac=0774d863486732552eb64aa08f0dc818ab65d28351cca6bf94d5aae044d72c9f&w=996",
+              "link": "https://example.com/night-cityscape"
+            },
+            {
+              "title": "Cityscape at Night",
+              "description": "Photographed stunning cityscapes during the night.",
+              "image": "https://img.freepik.com/free-photo/starry-sky-town_23-2151642578.jpg?t=st=1724224030~exp=1724227630~hmac=46bd128051cbe67c3168abfaa862f2be789e1ccc56b19c98878babeffbab2fdc&w=360",
+              "link": "https://example.com/night-cityscape"
+            },
+            {
+              "title": "Cityscape at Night",
+              "description": "Photographed stunning cityscapes during the night.",
+              "image": "https://img.freepik.com/free-photo/thunderstorm-countryside_23-2151762456.jpg?t=st=1724224144~exp=1724227744~hmac=9678ecf99fa41bd023bca679e91a3e919eead885fa94e86a6f1d7b4db46ad21d&w=740",
               "link": "https://example.com/night-cityscape"
             }
           ]
@@ -163,7 +295,19 @@
             {
               "title": "Gourmet Food Photography",
               "description": "Shot high-quality images of gourmet dishes for a restaurant menu.",
-              "image": "/images/food-photography.jpg",
+              "image": "https://img.freepik.com/free-photo/top-view-table-full-delicious-food-composition_23-2149141353.jpg?t=st=1724224074~exp=1724227674~hmac=e025b119794110fe16c0845bf07f7ef3eee244b16f8c802579c078f343e278e3&w=996",
+              "link": "https://example.com/food-photography"
+            },
+            {
+              "title": "Gourmet Food Photography",
+              "description": "Shot high-quality images of gourmet dishes for a restaurant menu.",
+              "image": "https://img.freepik.com/free-photo/tasty-boiled-spaghetti-pasta-with-basil-leaves-tomato-sack-with-bread-sticks-veg-salad_23-2148076247.jpg?t=st=1724224203~exp=1724227803~hmac=e26016e8cdcf4eba08dd5242d8f74f37c0954b00c225ab53414793eae276d13e&w=360",
+              "link": "https://example.com/food-photography"
+            },
+            {
+              "title": "Gourmet Food Photography",
+              "description": "Shot high-quality images of gourmet dishes for a restaurant menu.",
+              "image": "https://img.freepik.com/free-photo/vegetable-soup-concept-healthy-food-healthy-nutrition_185193-162790.jpg?t=st=1724224239~exp=1724227839~hmac=0ce3db0867ce7820ce3db945d443e54cfa90ddc0cf8dd5d3ef84dfdf822335d9&w=996",
               "link": "https://example.com/food-photography"
             }
           ]
