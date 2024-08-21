@@ -25,7 +25,10 @@
     <div
       v-show="showSubcategories && skill.subcategories"
       ref="dropdown"
-      class="absolute left-0 mt-1 w-60 bg-white shadow-2xl rounded-lg z-10 overflow-hidden opacity-0 transform scale-95 origin-top"
+      :class="[
+        'absolute left-0 mt-1 bg-white shadow-2xl rounded-lg z-10 overflow-hidden opacity-0 transform scale-95 origin-top',
+        dropdownClass,
+      ]"
     >
       <ul>
         <li
@@ -58,6 +61,7 @@ export default {
   data() {
     return {
       showSubcategories: false,
+      dropdownClass: "",
     };
   },
   watch: {
@@ -73,6 +77,8 @@ export default {
           duration: 0.5,
           ease: "power4.out",
         });
+
+        this.adjustDropdownPosition();
       } else {
         gsap.to(dropdown, {
           opacity: 0,
@@ -104,11 +110,30 @@ export default {
       });
       this.showSubcategories = false;
     },
+    adjustDropdownPosition() {
+      const dropdown = this.$refs.dropdown;
+      const rect = dropdown.getBoundingClientRect();
+
+      if (rect.right > window.innerWidth) {
+        this.dropdownClass = "dropdown-right";
+      } else {
+        this.dropdownClass = "";
+      }
+    },
   },
 };
 </script>
 
 <style scoped>
+body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.dropdown-right {
+  left: auto !important;
+  right: 0 !important;
+}
+
 button span::before,
 button span::after {
   content: "";
