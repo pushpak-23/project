@@ -100,7 +100,7 @@ export default {
         .to(
           text,
           {
-            rotate: -3,
+            rotate: 0,
             scale: 1.05,
             duration: 1,
             ease: "power2.out",

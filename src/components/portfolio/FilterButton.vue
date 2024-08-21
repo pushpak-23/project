@@ -1,8 +1,8 @@
 <template>
   <div
     class="relative inline-block"
-    @mouseenter="handleMouseEnter"
-    @mouseleave="handleMouseLeave"
+    @mouseenter="toggleSubcategories(true)"
+    @mouseleave="toggleSubcategories(false)"
   >
     <button
       @click="selectSkill"
@@ -25,7 +25,7 @@
     <div
       v-show="showSubcategories && skill.subcategories"
       ref="dropdown"
-      class="absolute left-0 mt-4 w-60 bg-white shadow-2xl rounded-lg z-10 overflow-hidden opacity-0 transform scale-95 origin-top"
+      class="absolute left-0 mt-1 w-60 bg-white shadow-2xl rounded-lg z-10 overflow-hidden opacity-0 transform scale-95 origin-top"
     >
       <ul>
         <li
@@ -58,7 +58,6 @@ export default {
   data() {
     return {
       showSubcategories: false,
-      openedByClick: false,
     };
   },
   watch: {
@@ -93,20 +92,10 @@ export default {
           mainCategory: this.skill.name,
           subCategory: "",
         });
-      } else {
-        this.showSubcategories = !this.showSubcategories;
-        this.openedByClick = this.showSubcategories;
       }
     },
-    handleMouseEnter() {
-      if (!this.openedByClick) {
-        this.showSubcategories = true;
-      }
-    },
-    handleMouseLeave() {
-      if (!this.openedByClick) {
-        this.showSubcategories = false;
-      }
+    toggleSubcategories(value) {
+      this.showSubcategories = value;
     },
     selectSubcategory(subcategoryName) {
       this.$emit("filter-selected", {
@@ -114,7 +103,6 @@ export default {
         subCategory: subcategoryName,
       });
       this.showSubcategories = false;
-      this.openedByClick = false;
     },
   },
 };
